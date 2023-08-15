@@ -1,0 +1,51 @@
+===========================
+How to Use 3-say_my_name.py
+===========================
+
+
+This module defines a matrix division function ``say_my_name(first_name, last_name="")``.
+First import the function  to be tested ``say_my_name`` from module ``3-say_my_name``.
+
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Valid test cases   
+
+>>> say_my_name("Cassandra", "Lelei")
+My name is Cassandra Lelei
+
+>>> say_my_name("Johnson SK", "II")
+My name is Johnson SK II
+
+Test case with empty last_name value
+
+>>> say_my_name("Cass")
+My name is Cass
+
+===============
+Invalid Names
+=============
+
+Test case with integers
+
+>>> say_my_name(6, "Lelei")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("LeBron", ["Cass", "Lelei", "Chep"])
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name({“Cassandra”}, 7.7)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Test case with empty function call
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'

@@ -1,0 +1,11 @@
+Using ''matrix_divided''
+---------------------------------
+This is an 2-matrix_divided text file . First import
+''matrix_divided'' from the ''2-matrix_divided'' module:
+
+>>>from 0x07-python-test_driven_development.2-matrix_divided import matrix_divided
+
+>>>matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+

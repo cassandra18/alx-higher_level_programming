@@ -1,0 +1,43 @@
+Using ''add_integer.txt''
+----------------------------
+This is 0-add_integer text file. First import
+''add_integer'' from the ''0-add_integer'' module:
+
+>>>from 0x07-python-test_driven_development.0-add_integer import add_integer
+
+Now use it:
+
+>>>add_integer(2, 3)
+5
+>>>add_integer(2, -2)
+0
+>>>add_integer(-4, -2)
+-6
+>>>add_integer(2, 2.5789)
+5
+>>>add_integer(2.89012, 2)
+5
+>>>add_integer(2.223378, 2.90123)
+5
+>>>add_integer(-2.8, -2.8775456)
+0
+>>>add_integer(-2, -2.908)
+??
+>>>add_integer(-2.0987, -2)
+0
+>>>add_integer(2, "a")
+Traceback (most recent call last):
+   ...
+TypeError: b must be an integer
+>>>add_integer("hello", 4)
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
+>>>add_integer("kui", "hey")
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
+>>>add_integer("key")
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
