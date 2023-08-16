@@ -13,5 +13,5 @@ def from_json_string(my_str):
     Return:
         An object (Python data structure).
     """
-    parsed_data = json.load(my_str)
+    parsed_data = json.loads(my_str)
     return (parsed_data)
