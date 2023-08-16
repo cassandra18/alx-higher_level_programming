@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Defines a funtion write_file."""
+"""Defines a funtion append_write."""
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """A function that appends a string to a text file.
 
     Args:
