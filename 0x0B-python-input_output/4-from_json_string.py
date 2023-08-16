@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-import json
 """Defines a function from_json_string."""
+
+
+import json
 
 
 def from_json_string(my_str):
