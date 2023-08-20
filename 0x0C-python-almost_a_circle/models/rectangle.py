@@ -24,7 +24,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Set the width of the rectangle.
-        
+
         Args:
             value: The new width value.
         Raises:
@@ -45,7 +45,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Set the height of the rectangle.
-    
+
         Args:
             value: The new height value.
         Raises:
@@ -57,7 +57,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
-    
+
     @property
     def x(self):
         """Get the value x of the rectangle."""
@@ -100,13 +100,14 @@ class Rectangle(Base):
         for h in range(self.__height):
             for x_coord in range(self.__x):
                 print(" ", end='')
-            for w in range (self.__width):
+            for w in range(self.__width):
                 print("#", end='')
             print()
 
     def __str__(self):
         """Return formatted string."""
-        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
         """Update method assigns an argument to each attribute.
