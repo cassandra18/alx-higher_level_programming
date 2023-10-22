@@ -1,19 +1,20 @@
 #!/usr/bin/python3
 
 """ Script that takes in the name of a state as an argument.
-    List all cities of that state, using the database hbtn_0e_4_usa.
+    List all cities of that state, using the dtbase hbtn_0e_4_usa.
 """
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    username, password, database, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    usrnm, paswd, dtbase = sys.argv[1], sys.argv[2], sys.argv[3]
+    st_name = sys.argv[4]
 
     db = MySQL.connect(
             host="localhost",
-            user=username,
-            passwd=password,
-            db=database,
+            user=usrnm
+            passwd=paswd
+            db=dtbase,
             port=3306
             )
 
@@ -26,7 +27,7 @@ if __name__ == "__main__":
     WHERE states.name = %s
     """
 
-    cursor.execute(query, (state_name,))
+    cursor.execute(query, (st_name,))
 
     executed_state = cursor.fetchone()
 

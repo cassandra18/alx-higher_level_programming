@@ -19,11 +19,10 @@ if __name__ == "__main__":
 
     """ Query the State objets containing letter 'a'."""
     result = session.query(State).filter(State.name.like('%a%'))
-                           .order_by(State.id).all()
+    result_order = result.order_by(State.id).all()
 
     """Print the results."""
-    for state in result:
+    for state in result_order:
         print("{}: {}".format(state.id, state.name))
-
 
     session.close()

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-#0-select_states module contains a script that lists all USA states in the DB.
+
+"""This module contains a script that lists all USA states in the DB."""
 import MySQLdb
 import sys
 

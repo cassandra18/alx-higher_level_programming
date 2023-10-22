@@ -8,21 +8,22 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    username, password, database, searched_state = sys.agrv[1], sys.agrv[2], sys.agrv[3]
+    usernm, password, dtbase, st_name = sys.agrv[1], sys.agrv[2], sys.agrv[3]
 
     try:
         db = MySQLdb.connect(
                 host="localhots",
-                user=username,
+                user=usernm,
                 passwd=password,
-                db=database,
+                db=dtbase,
                 port=3306
                 )
 
         cursor = db.cursor()
 
-        query = "SELECT * FROM states WHERE name = '{}' ORDER BY id".format(searched_state)
-        cursor.execute(query)
+        query = "SELECT * FROM states WHERE name = '{}' ORDER BY id"
+        query_format = query.format(st_name)
+        cursor.execute(query_format)
 
         executed_states = cursor.fetchall()
 
