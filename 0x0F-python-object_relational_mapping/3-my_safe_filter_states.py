@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 
-# This module contains a script that lists all states.
-# The name of the state must start with a upper N from db hbtn_0e_0_usa.
+# This module contains a script that takes in argument.
+# It displays the values in the  states table of from db hbtn_0e_0_usa.
+# Where name matches the argument.
+# This methos is safer than usingg formating to create sql query.
 
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    username, password, database = sys.agrv[1], sys.agrv[2], sys.agrv[3]
+    username, password, database, searched_state = sys.agrv[1], sys.agrv[2], sys.agrv[3]
 
     try:
         db = MySQLdb.connect(
@@ -20,8 +22,8 @@ if __name__ == "__main__":
 
         cursor = db.cursor()
 
-        
-        cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+        query = ("SELECT * FROM states WHERE name = %s ORDER BY id")
+        cursor.execute(query, (searched_state,))
 
         executed_states = cursor.fetchall()
 

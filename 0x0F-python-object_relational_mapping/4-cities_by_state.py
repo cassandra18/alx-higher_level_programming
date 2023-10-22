@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-# This module contains a script that lists all states.
-# The name of the state must start with a upper N from db hbtn_0e_0_usa.
+# This module contains a script that lists all cities from the DB
+
 
 import MySQLdb
 import sys
@@ -20,8 +20,14 @@ if __name__ == "__main__":
 
         cursor = db.cursor()
 
-        
-        cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+        query = """
+        SELECT  cities.id, cities.name, states.name
+        FROM cities
+        JOIN states ON cities.state_id = states.id
+        ORDER BY cities.id
+        """
+
+        cursor.execute(query)
 
         executed_states = cursor.fetchall()
 
