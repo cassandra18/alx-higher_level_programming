@@ -1,12 +1,6 @@
-
-
 0x10. Python - Network #0
-=========================
-
-
 
 Resources
----------
 
 **Read or watch**:
 
@@ -14,7 +8,6 @@ Resources
 -   [HTTP Cookies](https://intranet.alxswe.com/rltoken/MhVCl_0oviQldWPn5oX-NQ "HTTP Cookies")
 
 Learning Objectives
--------------------
 
 At the end of this project, you are expected to be able to [explain to anyone](https://intranet.alxswe.com/rltoken/6HRdeOrrKTW2ih43ObB8tQ "explain to anyone"), **without the help of Google**:
 
@@ -46,7 +39,6 @@ At the end of this project, you are expected to be able to [explain to anyone](
 -   Any form of plagiarism is strictly forbidden and will result in removal from the program.
 
 Requirements
-------------
 
 ### General
 
@@ -72,7 +64,6 @@ Requirements
 **Great!** You've completed the quiz successfully! Keep going! (Show quiz)
 
 Tasks
------
 
 ### 0\. cURL body size
 
