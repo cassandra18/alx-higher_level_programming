@@ -1,3 +1,3 @@
 #!/bin/bash
-#   Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response 
+# Sends a delete request to URL and displays response body
 curl -sX DELETE $1 -L
