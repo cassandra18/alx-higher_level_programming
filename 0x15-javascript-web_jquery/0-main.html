@@ -2,12 +2,51 @@
 <html lang="en">
   <head>
     <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+      #add_item {
+        background-color: #e40202;
+        width: 120px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        color: rgb(241, 233, 233);
+        font-size: large;
+        margin-bottom: 10px;
+        cursor: pointer;
+        text-align: center;
+      }
+      #toggle_header:hover {
+        background-color: #ff0000;
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.1);
+      }
+      .list {
+        padding-left: 0;
+      }
+     .my_list {
+        /* list-style: none; */
+        padding: 20px;
+        background-color: rgb(255, 245, 233);
+        max-width: 400px;
+        border: solid 1px #04ac47;
+        border-radius: 4px;
+     }
+    </style>
   </head>
   <body>
     <header>
       <h1>Holberton School</h1>
     </header>
+    <br />
+    <div id="add_item">Add item</div>
+    <br />
+    <ul class="list" >
+      <li class="my_list">Items</li>
+    </ul>
     <footer>&copy; Holberton School - 2017</footer>
-    <script type="text/javascript" src="0-script.js"></script>
+    <script type="text/javascript" src="5-script.js"></script>
   </body>
 </html>
